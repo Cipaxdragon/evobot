@@ -21,7 +21,7 @@
   "dependencies": {
     "@discordjs/voice": "^0.16.0",
     "array-move": "^3.0.1",
-    "discord.js": "^14.11.0",
+    "discord.js": "^14.12.1",
     "dotenv": "^16.1.4",
     "ffmpeg-static": "^4.4.1",
     "i18n": "^0.15.1",
@@ -29,11 +29,12 @@
     "play-dl": "^1.9.6",
     "soundcloud-downloader": "^0.2.3",
     "string-progressbar": "^1.0.4",
+    "typescript": "^5.1.6",
     "youtube-sr": "~4.3.0"
   },
   "devDependencies": {
     "@types/i18n": "^0.13.6",
-    "@types/node": "^20.3.1",
+    "@types/node": "^20.4.8",
     "cz-conventional-changelog": "^3.0.1",
     "nodemon": "^2.0.22",
     "ts-node": "^10.9.1"

@@ -5,6 +5,8 @@ import {
   Collection,
   Events,
   Interaction,
+  ActivityType,
+  PresenceData, PresenceStatusData,
   REST,
   Routes,
   Snowflake
@@ -30,14 +32,26 @@ export class Bot {
     this.client.login(config.TOKEN);
 
     this.client.on("ready", () => {
-      console.log(`${this.client.user!.username} ready!`);
-
+      console.log(`${this.client.user!.username} Jalan mi `);
       this.registerSlashCommands();
     });
 
     this.client.on("warn", (info) => console.log(info));
     this.client.on("error", console.error);
+   // Set bot's activity here
+   const activityData: PresenceData = {
+    activities: [
+      {
+        name: "Playing with GPT-3.5",
+        type: ActivityType.Playing,
+      },
+    ],
+    status: "online",
+  };
+  
+  
 
+  this.client.user?.setPresence(activityData);
     this.onInteractionCreate();
   }
 
