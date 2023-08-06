@@ -64,7 +64,7 @@
 		"cantJoinChannel": "Tidak dapat bergabung ke saluran: {error}",
 		"queueEnded": "❌ Req Pako Lagu",
 		"queueError": "Terjadi kesalahan: {error}",
-		"startedPlaying": "🎶 Hee Ta Putar Mi Talaso: **{title}** {url}",
+		"startedPlaying": "🎶 Hee Ta Putar Mi Talaso  : **{title}** {url}",
 		"skipSong": "<@{author}> ⏩ Den Sundala Na Skip Ki",
 		"pauseSong": "<@{author}> ⏸ menjeda lagu.",
 		"resumeSong": "<@{author}> ▶ melanjutkan memutar lagu!",

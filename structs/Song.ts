@@ -3,6 +3,10 @@ import youtube from "youtube-sr";
 import { i18n } from "../utils/i18n";
 import { videoPattern, isURL } from "../utils/patterns";
 const { stream , video_basic_info } = require('play-dl');
+import { ChatInputCommandInteraction, EmbedBuilder, SlashCommandBuilder } from "discord.js";
+import { splitBar } from "string-progressbar";
+import { bot } from "../index";
+
 
 export interface SongData {
   url: string;
@@ -75,6 +79,12 @@ export class Song {
   }
 
   public startMessage() {
+    const emoji = "▶️";
+    const progressBarLength = 20; // Panjang progress bar dalam karakter
+    const progressPercentage = 50;
+
+    
     return i18n.__mf("play.startedPlaying", { title: this.title, url: this.url });
+
   }
 }
