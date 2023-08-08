@@ -38,11 +38,11 @@ export class Bot {
       const activityData: PresenceData = {
         activities: [
           {
-            name: "Kontol",
+            name: "/play",
             type: ActivityType.Listening,
           },
         ],
-        status: "online",
+        status: "idle",
       };
 
       this.client.user?.setPresence(activityData);
@@ -53,6 +53,7 @@ export class Bot {
 
     this.client.on("warn", (info) => console.log(info));
     this.client.on("error", console.error);
+    
 // Set bot's activity here
 const activityData: PresenceData = {
   activities: [
