@@ -33,22 +33,38 @@ export class Bot {
 
     this.client.on("ready", () => {
       console.log(`${this.client.user!.username} Jalan mi `);
+
+      // Set bot's activity here, inside the ready event handler
+      const activityData: PresenceData = {
+        activities: [
+          {
+            name: "Kontol",
+            type: ActivityType.Listening,
+          },
+        ],
+        status: "online",
+      };
+
+      this.client.user?.setPresence(activityData);
+
       this.registerSlashCommands();
+      this.onInteractionCreate();
     });
 
     this.client.on("warn", (info) => console.log(info));
     this.client.on("error", console.error);
-   // Set bot's activity here
-   const activityData: PresenceData = {
-    activities: [
-      {
-        name: "Playing with GPT-3.5",
-        type: ActivityType.Playing,
-      },
-    ],
-    status: "online",
-  };
-  
+// Set bot's activity here
+const activityData: PresenceData = {
+  activities: [
+    {
+      name: "Kontol",
+      type: ActivityType.Playing,
+    },
+
+  ],
+  status: "online",
+};
+
   
 
   this.client.user?.setPresence(activityData);
